@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior:smooth;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    margin-bottom: 50px;
+}
+.navbar{
+    border-top: 10px solid #75527C;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    margin-right: 20px;
+    font-weight: 600;
+    color: #75527C;
+}
+/* Hero */
+.hero{
+    height: 100vh; 
+    background: url('./../images/pexels-gustavo-fring-3984340.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero .round-box{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* padding: 100px; */
+    text-align: center;
+    border: 1px solid #75527C;
+    z-index: 3;
+}
+.hero .round-box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(2.5%, 2.5%);
+    height: 380px;
+    width: 380px;
+    border-radius: 50%;
+    border: 3px solid #75527C;
+}
+.hero::after{
+    content: "";
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    background-color: #D5DBDB;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.hero .round-box .text-area{
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+.hero .round-box .head-text{
+    font-size: 26px;
+    font-weight: 400;
+    color: #75527C;
+}
+.hero .round-box .main-text{
+    font-size: 28px;
+    font-weight: 700;
+    color: #795280;
+    margin-top: 25px;
+    margin-bottom: 25px
+}
+.hero .round-box .text{
+    color: #75527C;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.hero .round-box .round-box-logo{
+    height : 50px;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.hero .round-border{
+    border: 1px solid #75527C;
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotation 3s infinite linear;
+}
+.hero .round-border::after{
+    content:"";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #75527C;
+    right: 50%;
+    top: -1.5%;
+}
+.hero .round-border::before{
+    content:"";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #75527C;
+    bottom : 10%;
+    left: 16%;
+}
+
+@keyframes rotation {
+    0% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+.hero .opacity-round-border{
+    position: absolute;
+    height: 550px;    
+    width: 550px;    
+    background-color: rgba(216, 216, 216, 0.575);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.section-head{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-head::before{ 
+    content: "";
+    width: 85%;
+    height : 500px;
+    background-color: #EAF2F2;
+    position: absolute;
+    border-radius: 50%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -10;
+}
+.section-head h3{
+    font-size: 36px;
+    font-weight: 300;
+    color: #75527C
+}
+.section-head h3 span{
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.card{
+    border: none;
+    background : transparent;
+    color: #795280;
+}
+.card img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+}
+.card .card-btn{
+    border: none;
+    background: transparent;
+}
+.card h5{
+    font-weight: 650;
+    color: #5B3267;
+}
+.more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.more-btn{
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #5B3267;
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 50px;
+    letter-spacing: 3px;
+    transition : 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.more-btn:hover{
+    background-color: #492255;
+    color: #fff;
+    transition : 0.5s
+}
